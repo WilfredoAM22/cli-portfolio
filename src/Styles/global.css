@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../Fuentes/JetBrainsMono-VariableFont_wght.ttf')
+    format('truetype');
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../Fuentes/JetBrainsMono-Italic-VariableFont_wght.ttf')
+    format('truetype');
+    font-style: italic;
+    font-weight: 100 800;
+    font-display: swap;
+}
+
+/* ========================================
+   RESET GLOBAL
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    background-color: var(--color-bg, #0d1117);
+    color: var(--color-text, #c9d1d9);
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   ELEMENTOS MULTIMEDIA
+   ======================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+/* ========================================
+   TIPOGRAFÍA
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    color: var(--color-text-strong, #f0f6fc);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw + 1rem, 1.75rem);
+}
+
+p {
+    margin-top: 0;
+}
+
+strong,
+b {
+    color: var(--color-text-strong, #f0f6fc);
+}
+
+small {
+    font-size: 0.875em;
+}
+
+/* ========================================
+   ENLACES
+   ======================================== */
+
+a {
+    color: var(--color-link, #58a6ff);
+    text-decoration: none;
+    transition: color var(--transition-duration, 180ms) ease;
+}
+
+a:hover {
+    color: var(--color-link-hover, #79b8ff);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-accent, #3fb950);
+    outline-offset: 4px;
+}
+
+/* ========================================
+   FORMULARIOS Y BOTONES
+   ======================================== */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background: transparent;
+    border: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent, #3fb950);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   SELECCIÓN DE TEXTO
+   ======================================== */
+
+::selection {
+    color: var(--color-text-strong, #f0f6fc);
+    background-color: var(--color-selection, rgba(88, 166, 255, 0.3));
+}
+
+/* ========================================
+   BARRA DE DESPLAZAMIENTO
+   ======================================== */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color:
+            var(--color-border, #30363d)
+            var(--color-bg, #0d1117);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-bg, #0d1117);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--color-border, #30363d);
+    border: 2px solid var(--color-bg, #0d1117);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-hover, #3fb950);
+}
+
+/* ========================================
+   ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

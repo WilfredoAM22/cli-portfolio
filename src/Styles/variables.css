@@ -1,0 +1,33 @@
+:root {
+    /* Fondos */
+    --color-bg: #0d1117;            /* fondo de la página */
+    --color-surface: #161b22;       /* tarjetas, barra superior, terminal */
+    --color-surface-hover: #1c2330; /* tarjetas al pasar el mouse */
+
+    /* Bordes */
+    --color-border: #30363d;
+    --color-border-hover: #3fb950;
+
+    /* Texto */
+    --color-text: #c9d1d9;          /* texto principal */
+    --color-text-strong: #f0f6fc;   /* títulos y nombre */
+    --color-text-muted: #8b949e;    /* texto secundario */
+    --font-mono: 'JetBrains Mono', monospace;/* Fuentes */
+    --transition-duration: 180ms; /*transiciones*/
+
+
+    /* Acentos */
+    --color-accent: #3fb950;        /* verde: prompt $, botones, estados */
+    --color-accent-hover: #56d364;
+    --color-link: #58a6ff;          /* azul: enlaces y nombres de proyecto */
+    --color-link-hover: #79b8ff;
+
+    /* Estados (útiles en la terminal) */
+    --color-error: #f85149;         /* comando desconocido */
+    --color-warning: #d29922;       /* avisos */
+    --color-success: #3fb950;       /* confirmaciones */
+
+    /* Detalles */
+    --color-selection: rgba(88, 166, 255, 0.3); /* texto seleccionado */
+    --color-on-accent: #0d1117;     /* texto sobre botones verdes */
+}
