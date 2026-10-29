@@ -1,75 +1,57 @@
-# React + TypeScript + Vite
+ CLI Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://shields.io)](https://react.dev)
+[![TypeScript](https://shields.io)](https://typescriptlang.org)
+[![Vite](https://shields.io)](https://vitejs.dev)
+[![CSS3](https://shields.io)](https://mozilla.org)
 
-Currently, two official plugins are available:
+> Un portafolio profesional interactivo diseñado como una interfaz de línea de comandos (CLI), optimizado para desarrolladores y entusiastas del entorno de terminal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Terminal Interactiva:** Explora mi perfil, proyectos y experiencia utilizando comandos reales en la terminal.
+- **Estructura Modular:** Secciones dedicadas a proyectos, habilidades, presentación y contacto.
+- **Aesthetic Dev:** Diseño oscuro minimalista inspirado en los entornos de desarrollo modernos.
+- **Soporte Bilingüe:** Interfaz completamente localizada en español e inglés.
+- **Diseño Responsivo:** Adaptado completamente tanto para pantallas de escritorio como para dispositivos móviles.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+El proyecto fue construido utilizando herramientas modernas para garantizar velocidad, tipado seguro y un rendimiento óptimo:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Core:** [React](https://react.dev) & [TypeScript](https://typescriptlang.org)
+- **Build Tool:** [Vite](https://vitejs.dev)
+- **Estilos:** CSS3 personalizado (Custom Properties y Flexbox/Grid)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 
-```
+Sigue estos pasos para clonar y ejecutar el proyecto localmente.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerrequisitos
+Asegúrate de tener instalado [Node.js](https://nodejs.org) (versión LTS recomendada) y **npm**.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Paso a Paso
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com
+   ```
 
-```
+2. **Navegar al directorio:**
+   ```bash
+   cd cli-portfolio
+   ```
+
+3. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+4. **Iniciar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Ver el proyecto:**
+   Abre la dirección local (usualmente `http://localhost:5173`) indicada en tu terminal.
