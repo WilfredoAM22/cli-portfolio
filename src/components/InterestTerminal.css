@@ -1,0 +1,100 @@
+.terminal-container {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: var(--font-mono);
+    color: var(--color-text);
+    cursor: text;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: border-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+/* Selección de texto a nivel global de toda la terminal */
+.terminal-container ::selection {
+    background-color: var(--color-selection);
+    color: var(--color-text-strong);
+}
+
+.terminal-title {
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+/* Altura adaptable con max-height para proteger vistas móviles */
+.terminal-history {
+    height: 300px;
+    max-height: 45vh;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Estilo para las líneas de salida del sistema */
+.terminal-line {
+    min-height: 1.2em;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: pre-wrap;
+    color: var(--color-text);
+}
+
+/* Sobrescribe el color si la línea es un comando del usuario */
+.terminal-line.terminal-command {
+    color: var(--color-accent);
+}
+
+/* Contenedor del Prompt + Input activo */
+.terminal-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-prompt {
+    color: var(--color-accent);
+    margin-right: 10px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Campo de texto de la terminal */
+.terminal-input {
+    background: transparent;
+    color: var(--color-text-strong);
+    border: none;
+    outline: none;
+    flex: 1;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    padding: 0;
+}
+
+/* Accesibilidad: Señal visual clara para navegación por teclado en el input */
+.terminal-input:focus-visible {
+    outline: none;
+    text-shadow: 0 0 5px var(--color-accent);
+}
+
+/* Accesibilidad: Indicador visual en el contenedor completo cuando está enfocado */
+.terminal-container:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(74, 246, 38, 0.15);
+}
+
+/* Enlaces futuros dentro de las respuestas */
+.terminal-link {
+    color: var(--color-link);
+    text-decoration: underline;
+    transition: color var(--transition-duration) ease;
+}
+
+.terminal-link:hover {
+    color: var(--color-link-hover);
+}

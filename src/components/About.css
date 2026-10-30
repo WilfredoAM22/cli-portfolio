@@ -1,0 +1,41 @@
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    color: var(--color-text);
+}
+.about-content{
+  max-width: 700px;
+}
+.about-content h2{
+    color: var(--color-text-strong);
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    position: relative;
+    padding-left: 14px;
+}
+.about-content p{
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 18px;
+}
+.about-content strong{
+    color: var(--color-text-strong);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+
+}
+.about-content h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;              /* Ajusta el inicio vertical */
+    transform: translateY(-50%);
+    height: 28px;           /* Altura de la barra respecto al tamaño del texto */
+    width: 4px;            /* Grosor de la barra */
+    background-color: var(--color-accent); /* */
+    border-radius: 4px;    /* Suaviza las esquinas de la barra */
+}

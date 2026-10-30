@@ -1,0 +1,103 @@
+.terminal-container{
+    background-color: var(--color-surface);
+    border:1px solid var(--color-border);
+    border-radius:8px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-family: var(--font-mono);
+    overflow: hidden;
+}
+.terminal-header{
+    display: flex;
+    background-color: var(--color-bg);
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+}
+.terminal-dots{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: auto;
+}
+.terminal-dots span{
+width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+}
+
+.terminal-dots span:nth-child(1){
+    background-color: #ff5f56;
+}
+
+.terminal-dots span:nth-child(2){
+    background-color: #ffbd2e;
+}
+.terminal-dots span:nth-child(3){
+    background-color: #27c93f;
+}
+.terminal-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+.terminal-body{
+    padding: 24px;
+    min-height: 250px;
+    color: var(--color-text);
+}
+.terminal-body h2{
+    color: var(--color-text-strong);
+    font-size: 24px;
+    margin-top: 0px;
+}
+.terminal-body h1{
+    color: var(--color-text-strong);
+    font-size: 28px;
+    margin:0 0 12px;
+}
+.terminal-role{
+    color:var(--color-link);
+    font-size: 14px;
+    margin: 0;
+}
+.terminal-command{
+    color: var(--color-accent);
+    font-size: 14px;
+    margin-bottom:14px;
+}
+.terminal-description{
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0;
+
+}
+.terminal-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+.terminal-skills span{
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+    border:1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 12px;
+    transition: background-color var(--transition-duration),
+    border-color var(--transition-duration);
+}
+
+.terminal-skills span:hover{
+    background-color: var(--color-surface);
+    border-color: var(--color-accent);
+    cursor: default;
+}
