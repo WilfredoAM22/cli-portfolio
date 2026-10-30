@@ -1,0 +1,26 @@
+.projects {
+    padding: 4rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.projects__title {
+    font-size: 2.25rem;
+    margin: 0 0 0.5rem;
+}
+
+.projects__subtitle {
+    margin: 0;
+    opacity: 0.75;
+}
+
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}

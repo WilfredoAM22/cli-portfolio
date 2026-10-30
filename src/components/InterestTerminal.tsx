@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import "./terminal.css"; // 1. IMPORTACIÓN: Vincula tus estilos desacoplados
+import "./InterestTerminal.css"; // 1. IMPORTACIÓN: Vincula tus estilos desacoplados
 
 // Tipado estricto para los comandos válidos
 type TerminalCommand = "help" | "arquitectura" | "ddd" | "agnostico" | "cleancode" | "hola" | "contacto";

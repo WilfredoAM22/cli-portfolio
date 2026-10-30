@@ -26,6 +26,7 @@
     --color-error: #f85149;         /* comando desconocido */
     --color-warning: #d29922;       /* avisos */
     --color-success: #3fb950;       /* confirmaciones */
+    --color-acento: #4AF626;   /*color de acento*/
 
     /* Detalles */
     --color-selection: rgba(88, 166, 255, 0.3); /* texto seleccionado */

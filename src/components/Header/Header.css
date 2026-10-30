@@ -1,0 +1,126 @@
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    transition: transform var(--transition-duration) ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 30px;
+    padding-block: 15px;
+    box-sizing: border-box;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.header-title h1 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--color-acento);
+    letter-spacing: 1px;
+}
+
+.main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--transition-duration) ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-acento);
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-acento);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-duration) ease;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.header-wrapper.header--hidden {
+    transform: translateY(-100%);
+}
+
+/* Botón del menú (oculto por defecto en escritorio) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* --- Estilos para Menú Móvil --- */
+@media (max-width: 768px) {
+    /* Mostrar el botón en móvil */
+    .menu-toggle {
+        display: block;
+        z-index: 300; /* Queda por encima del menú desplegable */
+    }
+
+    /* Ocultar el menú por defecto en móvil */
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg);
+        padding-top: 100px; /* Espacio para que no tape el título */
+        box-sizing: border-box;
+    }
+
+    /* Mostrarlo SÓLO cuando tenga la clase activa */
+    .main-nav.main-nav--open {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Apilar los enlaces en vertical */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .main-nav a {
+        font-size: 20px;
+    }
+
+    .header-title h1 {
+        font-size: 18px;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

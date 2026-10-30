@@ -16,10 +16,6 @@
     font-display: swap;
 }
 
-/* ========================================
-   RESET GLOBAL
-   ======================================== */
-
 *,
 *::before,
 *::after {
@@ -45,9 +41,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ========================================
-   ELEMENTOS MULTIMEDIA
-   ======================================== */
+/* ELEMENTOS MULTIMEDIA*/
 
 img,
 picture,
@@ -63,9 +57,7 @@ video {
     height: auto;
 }
 
-/* ========================================
-   TIPOGRAFÍA
-   ======================================== */
+/* TIPOGRAFÍA */
 
 h1,
 h2,
@@ -104,9 +96,7 @@ small {
     font-size: 0.875em;
 }
 
-/* ========================================
-   ENLACES
-   ======================================== */
+/* ENLACES */
 
 a {
     color: var(--color-link, #58a6ff);
@@ -122,10 +112,13 @@ a:focus-visible {
     outline: 2px solid var(--color-accent, #3fb950);
     outline-offset: 4px;
 }
+.main-content{
+    padding-top: 90px;
+    box-sizing: border-box;
 
-/* ========================================
-   FORMULARIOS Y BOTONES
-   ======================================== */
+}
+
+/*FORMULARIOS*/
 
 button,
 input,
@@ -161,18 +154,14 @@ textarea {
     outline-offset: 3px;
 }
 
-/* ========================================
-   SELECCIÓN DE TEXTO
-   ======================================== */
+/*SELECCIÓN DE TEXTO */
 
 ::selection {
     color: var(--color-text-strong, #f0f6fc);
     background-color: var(--color-selection, rgba(88, 166, 255, 0.3));
 }
 
-/* ========================================
-   BARRA DE DESPLAZAMIENTO
-   ======================================== */
+/*BARRA DE DESPLAZAMIENTO*/
 
 * {
     scrollbar-width: thin;
@@ -200,9 +189,7 @@ textarea {
     background: var(--color-border-hover, #3fb950);
 }
 
-/* ========================================
-   ACCESIBILIDAD: MOVIMIENTO REDUCIDO
-   ======================================== */
+/* ACCESIBILIDAD: MOVIMIENTO REDUCIDO*/
 
 @media (prefers-reduced-motion: reduce) {
     html {
